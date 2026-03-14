@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
+        <div class="container">
+          <a class="navbar-brand fw-bold" href="#">
+            <i class="bi bi-grid-3x3-gap-fill"></i> Go & IA
+          </a>
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#regras">Regras do Jogo</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#ia-alphago">IA & AlphaGo</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#ferramentas">Ferramentas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#estudos">Estudos</a>
+              </li>
+              <li class="nav-item ms-lg-3">
+                <a
+                  class="nav-link btn btn-outline-light btn-sm px-3"
+                  href="#sobre"
+                  >Sobre</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div style="padding-top: 70px"></div>
+    <main class="container my-5">
+      <section id="regras" class="py-5">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <h2 class="display-5 fw-bold text-primary">Regras do Jogo</h2>
+            <p class="lead">
+              O Go é um jogo de estratégia abstrata com mais de 2.500 anos, onde
+              o objetivo é cercar mais território que o oponente. Veja as 9
+              regras básicas do jogo:
+            </p>
+            <ul class="list-group">
+              <li class="list-group-item">
+                1. Go é jogado entre dois jogadores.
+              </li>
+              <li class="list-group-item">
+                2. Um dos jogadores usa as pedras brancas e o outro as pretas.
+                (Os jogadores se revezam colocando as pedras no tabuleiro, uma a
+                uma. O primeiro movimento, isto é, a colocação da primeira pedra
+                no tabuleiro, é feito pelas Pretas. Num jogo com “handicap”,
+                entretanto, Brancas jogam primeiro.)
+              </li>
+              <li class="list-group-item">
+                3. A pedra deve ser colocada em um dos cruzamentos.
+              </li>
+              <li class="list-group-item">
+                4. A pedra, uma vez colocada, não pode ser retirada (exceto
+                quando se aplica a regra número 6).
+              </li>
+              <li class="list-group-item">
+                5. O jogador que obtem mais território ganha o jogo.
+              </li>
+              <li class="list-group-item">
+                6. As pedras que perderem suas liberdades, ou “espaço para
+                respirar”, são retiradas do tabuleiro.
+              </li>
+              <li class="list-group-item">
+                7. Nenhuma pedra pode ser colocada num cruzamento onde não tenha
+                liberdade.
+              </li>
+              <li class="list-group-item">
+                8. Há restrições especiais nos movimentos de um jogador, na
+                situação chamada Ko.
+              </li>
+              <li class="list-group-item">
+                9. Regra referente ao jogo com “handicap” ou vantagem.
+              </li>
+            </ul>
+            <div class="mt-3">
+              <p>
+                <strong>Veja as regras detalhadas em: </strong>
+                <a
+                  href="https://baduk.com.br/regras-detalhadas/"
+                  target="_blank"
+                  >https://baduk.com.br/regras-detalhadas/</a
+                >
+              </p>
+            </div>
+            <div class="alert alert-info mt-3">
+              <p>
+                <strong>Dica de Abertura:</strong> Comece pelos cantos, depois
+                as laterais e, por fim, o centro. O "Star Point" (Hoshi) é o
+                ponto de partida mais comum.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-6 text-center">
+            <div class="p-5 bg-light border rounded-3 italic text-muted">
+              <img
+                src="tabuleiro-jogo.png"
+                class="img-fluid"
+                alt="Tabuleiro de Go"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="my-5" />
+
+      <section id="ia-alphago" class="py-5 bg-light rounded-4 p-4 shadow-sm">
+        <div class="row">
+          <div class="col-12">
+            <h2 class="display-5 fw-bold">IA & AlphaGo</h2>
+            <p>
+              Para nós da computação, o Go é fascinante pela sua complexidade
+              combinatória. Segundo a Wikipedia o cientista da computação Victor
+              Allis observa que partidas típicas entre jogadores de alto nível
+              duram cerca de 150 jogadas, com uma média de aproximadamente 250
+              escolhas por jogada, o que sugere uma complexidade da árvore de
+              jogo de 10<sup>360</sup>. Para se ter uma ideia o número de átomos
+              no universo é estimado em cerca de 10<sup>80</sup>.
+            </p>
+            <p>
+              O <strong>AlphaGo</strong>, desenvolvido pela DeepMind,
+              revolucionou a área ao combinar
+              <em>Monte Carlo Tree Search</em> (MCTS) com redes neurais
+              profundas (Deep Learning). Ele não apenas venceu Lee Sedol, mas
+              introduziu jogadas que muitos dos melhores jogadores de Go
+              caracterizaram como pouco ortodoxas com movimentos aparentemente
+              questionáveis que inicialmente confundiram os espectadores, mas
+              faziam sentido em retrospectiva. Ele foi um marco na história do
+              jogo, estabelecendo um novo estilo de jogo moderno.
+            </p>
+            <div class="container my-5">
+              <div class="row justify-content-center">
+                <div class="col-lg-10">
+                  <h3 class="mb-4 text-center">
+                    Documentário: AlphaGo - The Movie
+                  </h3>
+                  <div class="ratio ratio-16x9 shadow rounded overflow-hidden">
+                    <iframe
+                      width="560"
+                      height="315"
+                      src="https://www.youtube.com/embed/WXuK6gekU1Y?si=9JD93xjcKoDUucJS"
+                      title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerpolicy="strict-origin-when-cross-origin"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+
+                  <p class="mt-3 text-muted small text-center">
+                    Assista à jornada completa da DeepMind ao enfrentar o
+                    lendário Lee Sedol.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="my-5" />
+
+      <section id="ferramentas" class="py-5 bg-dark text-white rounded-4 p-4">
+        <div class="row">
+          <div class="offset-md-1 col-md-10">
+            <h2>Ferramentas de Análise</h2>
+            <p>
+              A ferramenta mais poderosa atualmente para estudo é o
+              <strong>KataGo</strong>. Diferente do AlphaGo, ele é aberto e
+              permite analisar pontuações e probabilidades de vitória em
+              qualquer posição do tabuleiro.
+            </p>
+            <p>
+              Uma das interfaces de código aberto para <strong>KataGO</strong> é
+              o KaTrain e pode ser encontrado pelo link
+              <a
+                href="https://github.com/sanderland/katrain"
+                class="link-light link-underline-opacity-25 link-underline-opacity-100-hover"
+                >https://github.com/sanderland/katrain
+              </a>
+            </p>
+            <span class="badge bg-primary">Código Aberto</span>
+            <span class="badge bg-info text-dark">Neural Network</span>
+          </div>
+        </div>
+      </section>
+
+      <hr class="my-5" />
+
+      <section id="estudos" class="py-5 text-center">
+        <h2 class="mb-4">Minha Rotina de Estudos</h2>
+        <div class="row g-4 text-start">
+          <div class="col-md-6">
+            <div class="card h-100 border-0 shadow-sm">
+              <div class="card-body">
+                <h5 class="card-title">
+                  <i class="bi bi-phone"></i>BadukPop e OSG
+                </h5>
+                <p class="card-text">
+                  Uso o aplicativo para resolver <em>Tsumegos</em> (problemas de
+                  vida e morte) e jogar partidas rápidas com tempo controlado. É
+                  excelente para treinar o reconhecimento de padrões.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card h-100 border-0 shadow-sm">
+              <div class="card-body">
+                <h5 class="card-title">
+                  <i class="bi bi-book"></i> Retomada Pós-Pandemia
+                </h5>
+                <p class="card-text">
+                  Conheci o jogo online durante a pandemia. Após um bom tempo
+                  sem jogar, estou retomando meus estudos revisando as aberturas
+                  (Fuseki) e resolvendo Tsumegos que são são problemas de "vida
+                  e morte" no jogo de tabuleiro Go (Baduk/Weiqi), onde o
+                  objetivo é encontrar a sequência correta de movimentos para
+                  capturar um grupo de pedras inimigo ou salvar o seu próprio
+                  grupo.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="my-5" />
+
+      <section id="sobre" class="py-5">
+        <div class="text-center">
+          <h2>Sobre o Autor</h2>
+          <p class="lead">Guilherme Krüger Araujo</p>
+          <p>
+            Estudante de
+            <strong
+              >Licenciatura em Computação e Robótica Educativa na UFRGS</strong
+            >. Este projeto une minha paixão por jogos milenares com a fronteira
+            da inteligência artificial e educação.
+          </p>
+        </div>
+      </section>
+    </main>
+    <footer
+      class="bg-dark text-white pt-5 pb-4 mt-5 border-top border-secondary"
+    >
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-lg-6 mb-8 mb-md-0">
+            <h5 class="text-uppercase fw-bold mb-4">Go & Bits</h5>
+            <p class="small text-white-50">
+              Um projeto dedicado à exploração da Inteligência Artificial
+              através do jogo Go. Desenvolvido como parte dos estudos de
+              Licenciatura em Computação na UFRGS.
+            </p>
+            <p class="small text-white-50">
+              <i class="bi bi-geo-alt-fill text-primary"></i> Porto Alegre, RS -
+              Brasil
+            </p>
+          </div>
+
+          <div class="col-md-3 col-lg-3 mb-4 mb-md-0">
+            <h5 class="text-uppercase fw-bold mb-4 text-white">Acadêmico</h5>
+            <p class="small mb-1 fw-bold">UFRGS</p>
+            <p class="small text-white-50">
+              Licenciatura em Computação e Robótica Educativa
+            </p>
+            <a
+              href="https://www.ufrgs.br/computacaorobotica"
+              target="_blank"
+              class="btn btn-outline-light btn-sm mt-2"
+              >Licenciatura em Computação e Robótica Educativa</a
+            >
+          </div>
+
+          <div class="col-md-3 col-lg-3">
+            <h5 class="text-uppercase fw-bold mb-4">Conecte-se</h5>
+            <div class="d-flex gap-3">
+              <a href="#" class="text-white fs-4 opacity-75 hover-opacity-100"
+                ><i class="bi bi-github"></i
+              ></a>
+              <a href="#" class="text-white fs-4 opacity-75 hover-opacity-100"
+                ><i class="bi bi-linkedin"></i
+              ></a>
+              <a href="#" class="text-white fs-4 opacity-75 hover-opacity-100"
+                ><i class="bi bi-envelope-at"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <hr class="my-4 border-secondary" />
+
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <p class="small mb-0 text-white-50">
+              &copy; 2026 **Guilherme Krüger Araujo**. <br class="d-md-none" />
+              Feito com <i class="bi bi-heart-fill text-danger"></i> em Porto
+              Alegre.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

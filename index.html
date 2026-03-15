@@ -15,7 +15,7 @@
       rel="stylesheet"
     />
   </head>
-  <body>
+  <body style="background-color: #fefae0">
     <header>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
         <div class="container">
@@ -60,6 +60,87 @@
     </header>
     <div style="padding-top: 70px"></div>
     <main class="container my-5">
+      <section class="container my-5 pt-4">
+        <div class="row justify-content-center">
+          <div class="col-md-10">
+            <div class="card border-0 shadow-sm bg-light p-4 rounded-4">
+              <h4 class="mb-4 text-center border-bottom pb-2 border-secondary">
+                Sumário do Site
+              </h4>
+              <div class="row g-3">
+                <div class="col-6 col-md-4 col-lg-2 text-center">
+                  <a
+                    href="#regras"
+                    class="text-decoration-none text-black opacity-75 hover-opacity-100"
+                  >
+                    <i class="bi bi-journal-text d-block fs-3 mb-2"></i>
+                    <small>Regras</small>
+                  </a>
+                </div>
+
+                <div
+                  class="col-6 col-md-4 col-lg-2 text-center border-start border-secondary"
+                >
+                  <a
+                    href="#ia-alphago"
+                    class="text-decoration-none text-black opacity-75 hover-opacity-100"
+                  >
+                    <i class="bi bi-cpu d-block fs-3 mb-2"></i>
+                    <small>IA & AlphaGo</small>
+                  </a>
+                </div>
+
+                <div
+                  class="col-6 col-md-4 col-lg-2 text-center border-start border-secondary"
+                >
+                  <a
+                    href="#estudos"
+                    class="text-decoration-none text-black opacity-75 hover-opacity-100"
+                  >
+                    <i class="bi bi-mortarboard d-block fs-3 mb-2"></i>
+                    <small>Estudos</small>
+                  </a>
+                </div>
+
+                <div
+                  class="col-6 col-md-4 col-lg-2 text-center border-start border-secondary d-none d-md-block"
+                >
+                  <a
+                    href="#ferramentas"
+                    class="text-decoration-none text-black opacity-75 hover-opacity-100"
+                  >
+                    <i class="bi bi-tools d-block fs-3 mb-2"></i>
+                    <small>Ferramentas</small>
+                  </a>
+                </div>
+
+                <div
+                  class="col-6 col-md-4 col-lg-2 text-center border-start border-secondary"
+                >
+                  <a
+                    href="#sobre"
+                    class="text-decoration-none text-black opacity-75 hover-opacity-100"
+                  >
+                    <i class="bi bi-person-badge d-block fs-3 mb-2"></i>
+                    <small>Sobre</small>
+                  </a>
+                </div>
+                <div
+                  class="col-6 col-md-4 col-lg-2 text-center border-start border-secondary"
+                >
+                  <a
+                    href="#rodape"
+                    class="text-decoration-none text-black opacity-75 hover-opacity-100"
+                  >
+                    <i class="bi bi-journal-arrow-down d-block fs-3 mb-2"></i>
+                    <small>Rodapé</small>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <section id="regras" class="py-5">
         <div class="row align-items-center">
           <div class="col-lg-6">
@@ -279,11 +360,10 @@
                 <p class="card-text">
                   Conheci o jogo online durante a pandemia. Após um bom tempo
                   sem jogar, estou retomando meus estudos revisando as aberturas
-                  (Fuseki) e resolvendo Tsumegos que são são problemas de "vida
-                  e morte" no jogo de tabuleiro Go (Baduk/Weiqi), onde o
-                  objetivo é encontrar a sequência correta de movimentos para
-                  capturar um grupo de pedras inimigo ou salvar o seu próprio
-                  grupo.
+                  (Fuseki) e resolvendo Tsumegos que são problemas de "vida e
+                  morte" onde o objetivo é encontrar a sequência correta de
+                  movimentos para capturar um grupo de pedras inimigo ou salvar
+                  o seu próprio grupo.
                 </p>
               </div>
             </div>
@@ -308,6 +388,7 @@
       </section>
     </main>
     <footer
+      id="rodape"
       class="bg-dark text-white pt-5 pb-4 mt-5 border-top border-secondary"
     >
       <div class="container">
@@ -342,10 +423,14 @@
           <div class="col-md-3 col-lg-3">
             <h5 class="text-uppercase fw-bold mb-4">Conecte-se</h5>
             <div class="d-flex gap-3">
-              <a href="https://github.com/guest42c/CREAD044-CATP01" class="text-white fs-4 opacity-75 hover-opacity-100"
+              <a
+                href="https://github.com/guest42c/CREAD044-CATP01"
+                class="text-white fs-4 opacity-75 hover-opacity-100"
                 ><i class="bi bi-github"></i
               ></a>
-              <a href="mailto:00150821@ufrgs.br" class="text-white fs-4 opacity-75 hover-opacity-100"
+              <a
+                href="mailto:00150821@ufrgs.br"
+                class="text-white fs-4 opacity-75 hover-opacity-100"
                 ><i class="bi bi-envelope-at"></i
               ></a>
             </div>
@@ -358,7 +443,9 @@
           <div class="col-md-12 text-center">
             <p class="small mb-0 text-white-50">
               &copy; 2026 <strong>Guilherme</strong>. <br class="d-md-none" />
-              Feito com <i class="bi bi-heart-fill text-danger"></i> para a disciplina CREAD044 - Programação para Web e Sistemas Multimídia do Curso de Licenciatura em Computação e Robótica Educacional.
+              Feito com <i class="bi bi-heart-fill text-danger"></i> para a
+              disciplina CREAD044 - Programação para Web e Sistemas Multimídia
+              do Curso de Licenciatura em Computação e Robótica Educacional.
             </p>
           </div>
         </div>
